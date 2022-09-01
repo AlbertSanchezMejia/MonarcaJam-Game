@@ -5,25 +5,28 @@ using UnityEngine;
 public class Enemy_Movement : MonoBehaviour
 {
     [SerializeField] float speed;
-    [SerializeField] Transform[] waypoints;
+    public Transform[] waypoint;
     int index;
 
     void Update()
     {
-        GoToWaypoint();
-        SetNextWaypoint();
+        if (waypoint.Length > 0)
+        {
+            GoToWaypoint();
+            SetNextWaypoint();
+        }
     }
 
     void GoToWaypoint()
     {
-        transform.position = Vector3.MoveTowards(transform.position, waypoints[index].position, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, waypoint[index].position, speed * Time.deltaTime);
     }
 
     void SetNextWaypoint()
     {
-        if (Vector3.Distance(transform.position, waypoints[index].position) < 0.1f)
+        if (Vector3.Distance(transform.position, waypoint[index].position) < 0.1f)
         {
-            if (index < waypoints.Length - 1)
+            if (index < waypoint.Length - 1)
             {
                 index++;
             }
