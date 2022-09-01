@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class Tower_Attack : MonoBehaviour
 {
-    [SerializeField] int newVariable;
-
-
+    [SerializeField] float attackDelay;
     void Start()
     {
-        
+        InvokeRepeating(nameof(Attack), 1f, attackDelay);
     }
 
-    void Update()
+    void Attack()
     {
-        
+        GameObject[] enemy = GameObject.FindGameObjectsWithTag("Enemy");
+        if(enemy.Length > 0)
+        {
+            if(enemy[0] != null)
+            Destroy(enemy[0]);
+        }
     }
 
 }
