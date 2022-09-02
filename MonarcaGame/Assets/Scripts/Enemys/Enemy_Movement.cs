@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,32 +6,28 @@ using UnityEngine;
 public class Enemy_Movement : MonoBehaviour
 {
     [SerializeField] float speed;
-    public Transform[] waypoint;
-    int index;
+    Rigidbody rb;
+    public Transform target;
 
-    void Update()
+    void Start()
     {
-        if (waypoint.Length > 0)
+        rb = GetComponent<Rigidbody>();
+    }
+
+    void FixedUpdate()
+    {
+        if (target != null)
         {
-            GoToWaypoint();
-            SetNextWaypoint();
+            Movement();
         }
     }
 
-    void GoToWaypoint()
+    void Movement()
     {
-        transform.position = Vector3.MoveTowards(transform.position, waypoint[index].position, speed * Time.deltaTime);
-    }
 
-    void SetNextWaypoint()
-    {
-        if (Vector3.Distance(transform.position, waypoint[index].position) < 0.1f)
-        {
-            if (index < waypoint.Length - 1)
-            {
-                index++;
-            }
-        }
+        Vector3 targetPosition = new Vector3(target.position.x, transform.position.y, target.position.z);
+        transform.LookAt(targetPosition);
+        rb.velocity = (transform.forward * speed * Time.fixedDeltaTime * 10);
     }
 
 }

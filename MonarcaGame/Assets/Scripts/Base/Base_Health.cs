@@ -10,7 +10,7 @@ public class Base_Health : MonoBehaviour
 
     private void Start()
     {
-        ShowHealth();
+        //ShowHealth();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -19,7 +19,7 @@ public class Base_Health : MonoBehaviour
         {
             health--;
             Destroy(other.gameObject);
-            ShowHealth();
+            //ShowHealth();
         }
     }
 
