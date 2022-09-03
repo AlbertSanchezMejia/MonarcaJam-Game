@@ -6,8 +6,8 @@ using UnityEngine;
 public class Enemy_Movement : MonoBehaviour
 {
     [SerializeField] float speed;
+    [HideInInspector] public Transform target;
     Rigidbody rb;
-    public Transform target;
 
     void Start()
     {

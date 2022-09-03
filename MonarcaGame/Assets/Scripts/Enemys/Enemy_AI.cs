@@ -1,11 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class Enemy_AI : MonoBehaviour
 {
-    [SerializeField] float speed;
     [SerializeField] Enemy_ClosestTarget _closestTarget;
     [SerializeField] Enemy_Movement _movement;
     bool canMove;
