@@ -12,7 +12,6 @@ public class Enemy_Collisions : MonoBehaviour
         if (other.CompareTag("Arrow"))
         {
             life--;
-            aaa.SetActive(false);
             Destroy(other.gameObject);
             if (life <= 0)
             {

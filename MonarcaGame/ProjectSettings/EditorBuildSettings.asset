@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/AlbertTest.unity
-    guid: e059e23cda721e943bf21616a4f03a8f
+    path: Assets/Scenes/AlbertTest 1.unity
+    guid: 13309a6e466bb904c8f3ebc006a9f543
   m_configObjects: {}

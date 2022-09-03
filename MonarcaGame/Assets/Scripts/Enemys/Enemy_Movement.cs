@@ -33,6 +33,7 @@ public class Enemy_Movement : MonoBehaviour
         if (target == null)
         {
             canMove = false;
+            rb.isKinematic = true;
         }
     }
 

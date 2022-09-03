@@ -1,30 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Tower_Life : MonoBehaviour
 {
     [SerializeField] int lifes;
-
-    private void OnTriggerEnter(Collider other)
+    [SerializeField] Text textLifes;
+    private void Start()
     {
-        if (other.gameObject.CompareTag("Sword"))
-        {
-            StartCoroutine(Co_RestLifes());
-        }
+        textLifes.text = "" + lifes;
+    }
+
+    public void RestLife()
+    {
+        StartCoroutine(Co_RestLifes());
     }
 
     IEnumerator Co_RestLifes()
     {
-        lifes--;
+        if(lifes > 0)
+        {
+            lifes--;
+            textLifes.text = "" + lifes;
+        }
+
         yield return new WaitForEndOfFrame();
 
         if (lifes <= 0)
         {
-            Destroy(transform.parent.gameObject);
+            FindObjectOfType<GameManager>().TowersManager();
+            textLifes.text = "";
+            Destroy(gameObject);
         }
     }
-
-
 
 }

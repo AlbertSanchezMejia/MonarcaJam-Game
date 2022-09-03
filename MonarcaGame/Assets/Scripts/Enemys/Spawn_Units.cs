@@ -7,28 +7,15 @@ public class Spawn_Units : MonoBehaviour
     [SerializeField] GameObject enemyPrefab;
     [SerializeField] float positionY;
     Camera myCamera;
-    public Vector3 algo;
+
     void Start()
     {
         myCamera = FindObjectOfType<Camera>();
     }
 
-    void Update()
+    private void OnMouseDown()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            //SpawnEnemy();
-            SpawnRayPosition();
-        }
-        algo = myCamera.ScreenToWorldPoint(Input.mousePosition);
-    }
-
-    void SpawnEnemy()
-    {
-        Vector3 spawnPosition = myCamera.ScreenToWorldPoint(Input.mousePosition);
-        spawnPosition.y = positionY;
-        Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
-
+        SpawnRayPosition();
     }
 
     void SpawnRayPosition()

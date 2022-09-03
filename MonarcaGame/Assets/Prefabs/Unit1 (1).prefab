@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7639703784407914234}
   - component: {fileID: 2940365284850623433}
   - component: {fileID: 2187425329188158984}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Sword
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7686316647811776643}
   - component: {fileID: 6227890559181818404}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AniSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: -5174445559514950366}
   - component: {fileID: -2557575441897960821}
   - component: {fileID: 8359890953213091096}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Unit1 (1)
   m_TagString: Unit
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6a4d7f2b663d9242aa6ff680d2c445a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 2
+  life: 1
   aaa: {fileID: 7819265655334683498}
 --- !u!114 &-2557575441897960821
 MonoBehaviour:
@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 7819265655334683509}
   - component: {fileID: 7819265655334683511}
   - component: {fileID: 7819265655334683508}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
