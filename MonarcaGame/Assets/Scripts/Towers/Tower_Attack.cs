@@ -70,7 +70,7 @@ public class Tower_Attack : MonoBehaviour
     {
         if (other.CompareTag("Unit"))
         {
-            nearbyUnits.Add(other.gameObject);
+            nearbyUnits.Remove(other.gameObject);
         }
     }
 
