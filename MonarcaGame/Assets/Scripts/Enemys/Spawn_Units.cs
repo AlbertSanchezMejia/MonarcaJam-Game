@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawn_Enemys : MonoBehaviour
+public class Spawn_Units : MonoBehaviour
 {
     [SerializeField] GameObject enemyPrefab;
     [SerializeField] float positionY;
