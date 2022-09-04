@@ -5,11 +5,12 @@ using UnityEngine;
 public class Tower_Attack : MonoBehaviour
 {
     [SerializeField] float arrowSpeed;
-    [SerializeField] float attackDelay;
+    [SerializeField] float waitToAttack;
     [SerializeField] Transform sentinel;
     [SerializeField] Rigidbody arrowPrefab;
     [SerializeField] List<GameObject> nearbyUnits;
     bool canAttack;
+    [SerializeField] AudioSource sfxAttack;
 
     void Start()
     {
@@ -47,8 +48,9 @@ public class Tower_Attack : MonoBehaviour
         if (canAttack)
         {
             ShootArrow();
+            sfxAttack.Play();
             canAttack = false;
-            Invoke(nameof(TrueCanAttack), attackDelay);
+            Invoke(nameof(TrueCanAttack), waitToAttack);
         }
     }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] GameObject winText;
-    int towerCount;
+    public int towerCount;
 
     void Start()
     {

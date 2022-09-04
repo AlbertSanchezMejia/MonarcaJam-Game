@@ -7,6 +7,8 @@ public class Tower_Life : MonoBehaviour
 {
     [SerializeField] int lifes;
     [SerializeField] Text textLifes;
+    bool wasAlreadyCalled = false;
+
     private void Start()
     {
         textLifes.text = "" + lifes;
@@ -27,8 +29,9 @@ public class Tower_Life : MonoBehaviour
 
         yield return new WaitForEndOfFrame();
 
-        if (lifes <= 0)
+        if (lifes == 0 && wasAlreadyCalled == false)
         {
+            wasAlreadyCalled = true;
             FindObjectOfType<GameManager>().TowersManager();
             textLifes.text = "";
             Destroy(gameObject);
