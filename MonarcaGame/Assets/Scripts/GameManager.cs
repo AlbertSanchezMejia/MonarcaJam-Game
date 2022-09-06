@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] GameObject winText;
-    public int towerCount;
+    [SerializeField] GameObject textWin;
+    [SerializeField] AudioSource musicWin;
+    [SerializeField] AudioSource musicGame;
+    [HideInInspector] public int towerCount;
 
     void Start()
     {
@@ -18,7 +20,9 @@ public class GameManager : MonoBehaviour
         towerCount--;
         if(towerCount <= 0)
         {
-            winText.SetActive(true);
+            musicWin.Play();
+            musicGame.Stop();
+            textWin.SetActive(true);
         }
     }
 

@@ -10,7 +10,8 @@ public class Tower_Attack : MonoBehaviour
     [SerializeField] Rigidbody arrowPrefab;
     [SerializeField] List<GameObject> nearbyUnits;
     bool canAttack;
-    [SerializeField] AudioSource sfxAttack;
+    [SerializeField] AudioClip sfxAttack;
+    [SerializeField] Audio_Manager _audio;
 
     void Start()
     {
@@ -47,8 +48,8 @@ public class Tower_Attack : MonoBehaviour
         sentinel.LookAt(nearbyUnits[0].transform);
         if (canAttack)
         {
+            _audio.PlaySound(sfxAttack);
             ShootArrow();
-            sfxAttack.Play();
             canAttack = false;
             Invoke(nameof(TrueCanAttack), waitToAttack);
         }

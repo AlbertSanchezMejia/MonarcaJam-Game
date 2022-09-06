@@ -11,7 +11,7 @@ public class Tower_Life : MonoBehaviour
 
     private void Start()
     {
-        textLifes.text = "" + lifes;
+        WriteTextLife("" + lifes);
     }
 
     public void RestLife()
@@ -24,7 +24,7 @@ public class Tower_Life : MonoBehaviour
         if(lifes > 0)
         {
             lifes--;
-            textLifes.text = "" + lifes;
+            WriteTextLife("" + lifes);
         }
 
         yield return new WaitForEndOfFrame();
@@ -33,9 +33,14 @@ public class Tower_Life : MonoBehaviour
         {
             wasAlreadyCalled = true;
             FindObjectOfType<GameManager>().TowersManager();
-            textLifes.text = "";
+            WriteTextLife("");
             Destroy(gameObject);
         }
+    }
+
+    void WriteTextLife(string texto)
+    {
+        //textLifes.text = texto;
     }
 
 }

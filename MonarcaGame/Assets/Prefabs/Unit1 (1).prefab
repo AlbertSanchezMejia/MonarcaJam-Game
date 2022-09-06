@@ -294,7 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6a4d7f2b663d9242aa6ff680d2c445a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 4
+  life: 3
   aaa: {fileID: 7819265655334683498}
 --- !u!114 &-2557575441897960821
 MonoBehaviour:
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movement: {fileID: 7339966711953670375}
   animator: {fileID: 6227890559181818404}
-  attackDelay: 3
+  attackDelay: 0.55
   canAttack: 1
 --- !u!54 &8359890953213091096
 Rigidbody:
