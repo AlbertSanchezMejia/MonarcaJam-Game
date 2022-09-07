@@ -6,13 +6,7 @@ using UnityEngine.UI;
 public class Tower_Life : MonoBehaviour
 {
     [SerializeField] int lifes;
-    [SerializeField] Text textLifes;
     bool wasAlreadyCalled = false;
-
-    private void Start()
-    {
-        WriteTextLife("" + lifes);
-    }
 
     public void RestLife()
     {
@@ -24,7 +18,6 @@ public class Tower_Life : MonoBehaviour
         if(lifes > 0)
         {
             lifes--;
-            WriteTextLife("" + lifes);
         }
 
         yield return new WaitForEndOfFrame();
@@ -33,14 +26,9 @@ public class Tower_Life : MonoBehaviour
         {
             wasAlreadyCalled = true;
             FindObjectOfType<GameManager>().TowersManager();
-            WriteTextLife("");
             Destroy(gameObject);
         }
     }
 
-    void WriteTextLife(string texto)
-    {
-        //textLifes.text = texto;
-    }
 
 }

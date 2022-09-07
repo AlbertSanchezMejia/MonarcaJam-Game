@@ -5,8 +5,6 @@ using UnityEngine;
 public class Tower_Body : MonoBehaviour
 {
     Tower_Life tower_Life;
-    [SerializeField] Audio_Manager _audio;
-
 
     void Start()
     {
@@ -18,7 +16,6 @@ public class Tower_Body : MonoBehaviour
         if (other.gameObject.CompareTag("Sword"))
         {
             tower_Life.RestLife();
-            _audio.SfxSwords();
         }
     }
 

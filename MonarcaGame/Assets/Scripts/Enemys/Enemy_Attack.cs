@@ -5,7 +5,6 @@ using UnityEngine;
 public class Enemy_Attack : MonoBehaviour
 {
     [SerializeField] Enemy_Movement _movement;
-    [SerializeField] Animator animator;
     [SerializeField] float attackDelay;
     [SerializeField] bool canAttack;
     Transform currentTarget;
@@ -14,7 +13,6 @@ public class Enemy_Attack : MonoBehaviour
     {
         if(currentTarget != null)
         {
-            animator.Play("SwordAttack");
             Invoke(nameof(ChangeState), attackDelay);
         }
         else { canAttack = true; }
