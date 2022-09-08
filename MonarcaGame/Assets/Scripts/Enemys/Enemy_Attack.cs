@@ -8,7 +8,7 @@ public class Enemy_Attack : MonoBehaviour
     [SerializeField] float attackDelay;
     [SerializeField] bool canAttack;
     Transform currentTarget;
-
+    [SerializeField] Animator animator;
     void ChangeState()
     {
         if(currentTarget != null)
@@ -46,6 +46,8 @@ public class Enemy_Attack : MonoBehaviour
     {
         Rigidbody sword = Instantiate(ShootB.swordPrefab, transform.position, transform.rotation);
         sword.velocity = transform.forward * 5;
+
+        animator.Play("Attack");
     }
 
 }

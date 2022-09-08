@@ -10,20 +10,17 @@ public class Tower_Attack : MonoBehaviour
     [SerializeField] Rigidbody arrowPrefab;
     [SerializeField] List<GameObject> nearbyUnits;
     bool canAttack;
+    [SerializeField] Animator aniAttack;
 
     void Start()
     {
         TrueCanAttack();
+        InvokeRepeating(nameof(CheckTargets), 0, 0.2f);
     }
 
     void TrueCanAttack()
     {
         canAttack = true;
-    }
-
-    void Update()
-    {
-        CheckTargets();
     }
 
     void CheckTargets()
@@ -49,6 +46,12 @@ public class Tower_Attack : MonoBehaviour
             ShootArrow();
             canAttack = false;
             Invoke(nameof(TrueCanAttack), waitToAttack);
+
+            if(aniAttack != null)
+            {
+                aniAttack.Play("Attack");
+            }
+
         }
     }
 
@@ -63,14 +66,6 @@ public class Tower_Attack : MonoBehaviour
         if (other.CompareTag("Unit"))
         {
             nearbyUnits.Add(other.gameObject);
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Unit"))
-        {
-            nearbyUnits.Remove(other.gameObject);
         }
     }
 

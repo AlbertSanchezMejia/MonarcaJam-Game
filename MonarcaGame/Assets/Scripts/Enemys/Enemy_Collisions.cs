@@ -5,7 +5,6 @@ using UnityEngine;
 public class Enemy_Collisions : MonoBehaviour
 {
     [SerializeField] int life;
-    [SerializeField] GameObject aaa;
 
     private void OnTriggerEnter(Collider other)
     {

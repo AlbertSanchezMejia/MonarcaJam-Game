@@ -15,6 +15,7 @@ public class Tower_Body : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Sword"))
         {
+            Destroy(other.gameObject);
             tower_Life.RestLife();
         }
     }

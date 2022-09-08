@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] GameObject textWin;
+    [SerializeField] GameObject witches;
     [SerializeField] AudioSource musicWin;
     [SerializeField] AudioSource musicGame;
     [HideInInspector] public int towerCount;
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
         towerCount--;
         if(towerCount <= 0)
         {
+            witches.SetActive(false);
             musicWin.Play();
             musicGame.Stop();
             textWin.SetActive(true);
