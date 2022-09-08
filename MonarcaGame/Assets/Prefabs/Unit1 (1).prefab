@@ -311,7 +311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movement: {fileID: 7339966711953670375}
   attackDelay: 0.55
-  canAttack: 0
+  canAttack: 1
 --- !u!54 &8359890953213091096
 Rigidbody:
   m_ObjectHideFlags: 0

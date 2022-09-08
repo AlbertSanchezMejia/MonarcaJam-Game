@@ -13,6 +13,7 @@ public class Enemy_Attack : MonoBehaviour
     {
         if(currentTarget != null)
         {
+            Attack();
             Invoke(nameof(ChangeState), attackDelay);
         }
         else { canAttack = true; }
@@ -39,6 +40,12 @@ public class Enemy_Attack : MonoBehaviour
             CancelInvoke();
             canAttack = true;
         }
+    }
+
+    void Attack()
+    {
+        Rigidbody sword = Instantiate(ShootB.swordPrefab, transform.position, transform.rotation);
+        sword.velocity = transform.forward * 5;
     }
 
 }

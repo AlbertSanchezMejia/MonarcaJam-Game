@@ -43,9 +43,9 @@ public class Tower_Attack : MonoBehaviour
 
     void StartAttack()
     {
-        sentinel.LookAt(nearbyUnits[0].transform);
         if (canAttack)
         {
+            sentinel.LookAt(nearbyUnits[0].transform);
             ShootArrow();
             canAttack = false;
             Invoke(nameof(TrueCanAttack), waitToAttack);
