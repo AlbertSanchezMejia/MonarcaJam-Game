@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     void SetDangerMusic()
     {
-        if(musicGame2.isPlaying == false)
+        if(musicGame2.isPlaying == false && towerCount <= 2)
         {
             musicGame1.Stop();
             musicGame2.Play();
