@@ -11,9 +11,12 @@ public class Tower_Attack : MonoBehaviour
     [SerializeField] List<GameObject> nearbyUnits;
     bool canAttack;
     [SerializeField] Animator aniAttack;
+    Audio_Manager _audio;
+    [SerializeField] AudioClip sfxShootMagic;
 
     void Start()
     {
+        _audio = FindObjectOfType<Audio_Manager>();
         TrueCanAttack();
         InvokeRepeating(nameof(CheckTargets), 0, 0.2f);
     }
@@ -47,7 +50,9 @@ public class Tower_Attack : MonoBehaviour
             canAttack = false;
             Invoke(nameof(TrueCanAttack), waitToAttack);
 
-            if(aniAttack != null)
+            _audio.PlaySound(sfxShootMagic);
+
+            if (aniAttack != null)
             {
                 aniAttack.Play("Attack");
             }

@@ -9,6 +9,7 @@ public class Enemy_Attack : MonoBehaviour
     [SerializeField] bool canAttack;
     Transform currentTarget;
     [SerializeField] Animator animator;
+
     void ChangeState()
     {
         if(currentTarget != null)
@@ -21,7 +22,9 @@ public class Enemy_Attack : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (_movement.target == null) { return; }
+        if (_movement.target == null)
+        {
+            return; }
 
         if (other.gameObject == _movement.target.gameObject && canAttack == true)
         {
@@ -33,7 +36,9 @@ public class Enemy_Attack : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (_movement.target == null) { return; }
+        if (_movement.target == null)
+        {
+            return; }
 
         if (other.gameObject == _movement.target.gameObject)
         {

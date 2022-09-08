@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class Audio_Manager : MonoBehaviour
 {
-    [SerializeField] AudioSource audiosource;
+    [SerializeField] AudioSource audioSClips;
     [SerializeField] AudioClip[] sfxDamage;
     //[SerializeField] Audio_Manager _audio;
 
     public void PlaySound(AudioClip clip)
     {
-        audiosource.PlayOneShot(clip);
+        audioSClips.PlayOneShot(clip);
     }
 
     public void SfxSwords()
     {
         int a = Random.Range(0, sfxDamage.Length);
-        audiosource.PlayOneShot(sfxDamage[a]);
+        audioSClips.PlayOneShot(sfxDamage[a]);
     }
 
 }

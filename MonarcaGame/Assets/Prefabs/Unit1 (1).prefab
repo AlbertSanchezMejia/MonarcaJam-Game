@@ -119,6 +119,7 @@ MonoBehaviour:
   speed: 5
   _closestTarget: {fileID: 774035247850163393}
   target: {fileID: 0}
+  animator: {fileID: 203062807387725861}
 --- !u!114 &774035247850163393
 MonoBehaviour:
   m_ObjectHideFlags: 0

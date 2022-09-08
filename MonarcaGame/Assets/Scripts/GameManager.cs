@@ -6,9 +6,11 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] GameObject textWin;
     [SerializeField] GameObject witches;
-    [SerializeField] AudioSource musicWin;
-    [SerializeField] AudioSource musicGame;
     [HideInInspector] public int towerCount;
+
+    [SerializeField] AudioSource musicGame1;
+    [SerializeField] AudioSource musicGame2;
+    [SerializeField] AudioSource musicWin;
 
     void Start()
     {
@@ -21,11 +23,28 @@ public class GameManager : MonoBehaviour
         towerCount--;
         if(towerCount <= 0)
         {
-            witches.SetActive(false);
-            musicWin.Play();
-            musicGame.Stop();
+            Destroy(witches);
             textWin.SetActive(true);
+            SetWinMusic();
+            return;
         }
+        SetDangerMusic();
+    }
+
+    void SetDangerMusic()
+    {
+        if(musicGame2.isPlaying == false)
+        {
+            musicGame1.Stop();
+            musicGame2.Play();
+        }
+    }
+
+    void SetWinMusic()
+    {
+        musicGame1.Stop();
+        musicGame2.Stop();
+        musicWin.Play();
     }
 
 }

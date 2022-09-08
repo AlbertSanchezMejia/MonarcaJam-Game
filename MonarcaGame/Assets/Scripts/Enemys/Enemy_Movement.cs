@@ -11,6 +11,7 @@ public class Enemy_Movement : MonoBehaviour
     public Transform target;
     bool canMove = true;
     Rigidbody rb;
+    [SerializeField] Animator animator;
 
     void Start()
     {
@@ -34,6 +35,7 @@ public class Enemy_Movement : MonoBehaviour
         {
             canMove = false;
             rb.isKinematic = true;
+            animator.Play("Idle");
         }
     }
 
