@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Attack : MonoBehaviour
+public class Knights_Attack : MonoBehaviour
 {
-    [SerializeField] Enemy_Movement _movement;
+    [SerializeField] Knights_Movement _movement;
     [SerializeField] float attackDelay;
     [SerializeField] bool canAttack;
     Transform currentTarget;

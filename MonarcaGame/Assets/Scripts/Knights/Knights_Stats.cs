@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Witch_Attack : MonoBehaviour
+public class Knights_Stats : MonoBehaviour
 {
     [SerializeField] int newVariable;
 

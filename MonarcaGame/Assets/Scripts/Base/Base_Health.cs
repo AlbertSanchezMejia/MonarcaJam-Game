@@ -6,14 +6,8 @@ using UnityEngine.UI;
 public class Base_Health : MonoBehaviour
 {
     [SerializeField] int health;
-    [SerializeField] Text textHealth;
 
-    private void Start()
-    {
-        //ShowHealth();
-    }
-
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
@@ -23,9 +17,16 @@ public class Base_Health : MonoBehaviour
         }
     }
 
+    /*
+    [SerializeField] Text textHealth;
+    private void Start()
+    {
+        ShowHealth();
+    }
+
     void ShowHealth()
     {
         textHealth.text = "Vida: " + health;
-    }
+    }*/
 
 }

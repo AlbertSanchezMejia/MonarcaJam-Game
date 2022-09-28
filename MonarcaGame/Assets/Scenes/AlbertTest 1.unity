@@ -269,8 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2653736f69439d44ac0bd71d14c8110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 7819265654422437486, guid: 1dbdd919da7af6141843017d6dc3caa3, type: 3}
-  positionY: 0.25
+  unitPrefab: {fileID: 7819265654422437486, guid: 1dbdd919da7af6141843017d6dc3caa3, type: 3}
 --- !u!1 &124835643
 GameObject:
   m_ObjectHideFlags: 0
@@ -2876,7 +2875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199a33080e7ae5749bcd5ec3b0680b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifes: 70
+  lifes: 60
   audiosource: {fileID: 1770296381}
   managerGame: {fileID: 1120462626}
 --- !u!1 &391238220
@@ -4925,7 +4924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199a33080e7ae5749bcd5ec3b0680b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifes: 70
+  lifes: 60
   audiosource: {fileID: 1770296381}
   managerGame: {fileID: 1120462626}
 --- !u!135 &656308661
@@ -8472,7 +8471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199a33080e7ae5749bcd5ec3b0680b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifes: 70
+  lifes: 60
   audiosource: {fileID: 1770296381}
   managerGame: {fileID: 1120462626}
 --- !u!135 &936649527
@@ -13483,7 +13482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199a33080e7ae5749bcd5ec3b0680b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifes: 50
+  lifes: 60
   audiosource: {fileID: 1770296381}
   managerGame: {fileID: 1120462626}
 --- !u!1 &1708086472

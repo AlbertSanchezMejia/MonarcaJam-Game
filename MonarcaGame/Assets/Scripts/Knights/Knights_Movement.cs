@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Enemy_Movement : MonoBehaviour
+public class Knights_Movement : MonoBehaviour
 {
     [SerializeField] float speed;
-    [SerializeField] Enemy_ClosestTarget _closestTarget;
+    [SerializeField] Knights_ClosestTarget _closestTarget;
     public Transform target;
     bool canMove = true;
     Rigidbody rb;

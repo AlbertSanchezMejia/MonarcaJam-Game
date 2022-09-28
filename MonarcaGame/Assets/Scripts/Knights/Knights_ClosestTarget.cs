@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_ClosestTarget : MonoBehaviour
+public class Knights_ClosestTarget : MonoBehaviour
 {
     public Transform FindClosestTarget()
     {
