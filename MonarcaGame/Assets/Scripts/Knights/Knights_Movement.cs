@@ -6,12 +6,11 @@ using UnityEngine;
 
 public class Knights_Movement : MonoBehaviour
 {
-    [SerializeField] float speed;
-    [SerializeField] Knights_ClosestTarget _closestTarget;
-    public Transform target;
+    [SerializeField] Animator animator;
+
+    [HideInInspector] public Transform target;
     bool canMove = true;
     Rigidbody rb;
-    [SerializeField] Animator animator;
 
     void Start()
     {
@@ -30,7 +29,7 @@ public class Knights_Movement : MonoBehaviour
 
     void SetClosestTarget()
     {
-        target = _closestTarget.FindClosestTarget();
+        target = Knights_Stats.singleton.FindClosestTarget(transform.position);
         if (target == null)
         {
             canMove = false;
@@ -51,7 +50,7 @@ public class Knights_Movement : MonoBehaviour
     {
         Vector3 targetPosition = new Vector3(target.position.x, transform.position.y, target.position.z);
         transform.LookAt(targetPosition);
-        rb.velocity = (transform.forward * speed * Time.fixedDeltaTime * 10);
+        rb.velocity = (transform.forward * Knights_Stats.singleton.movementSpeed * Time.fixedDeltaTime * 10);
     }
 
 }

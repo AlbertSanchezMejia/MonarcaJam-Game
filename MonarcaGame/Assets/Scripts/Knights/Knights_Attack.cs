@@ -3,9 +3,9 @@ using UnityEngine;
 public class Knights_Attack : MonoBehaviour
 {
     [SerializeField] Knights_Movement _movement;
-    [SerializeField] float attackDelay;
     [SerializeField] bool canAttack;
     Transform currentTarget;
+
     [SerializeField] Animator animator;
 
     void ChangeState()
@@ -13,7 +13,7 @@ public class Knights_Attack : MonoBehaviour
         if(currentTarget != null)
         {
             Attack();
-            Invoke(nameof(ChangeState), attackDelay);
+            Invoke(nameof(ChangeState), Knights_Stats.singleton.attackDelay);
         }
         else { canAttack = true; }
     }
