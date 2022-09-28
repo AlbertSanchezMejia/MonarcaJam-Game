@@ -2837,12 +2837,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c07d45c7ed032ac46b6eaa8d67b06e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowSpeed: 7
-  waitToAttack: 0.55
   sentinel: {fileID: 391238221}
   arrowPrefab: {fileID: 5298469509799718652, guid: e43ef23abbf35574b970af2f12e1c8a5, type: 3}
   nearbyUnits: []
-  aniAttack: {fileID: 0}
   sfxShootMagic: {fileID: 8300000, guid: 427835ed5114133439b194187598faa1, type: 3}
 --- !u!4 &375039429
 Transform:
@@ -4759,7 +4756,7 @@ Transform:
   - {fileID: 738889468}
   - {fileID: 731584222}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &609405888
 GameObject:
@@ -4891,7 +4888,7 @@ Transform:
   - {fileID: 402837525}
   - {fileID: 1175592644}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &656308659
 GameObject:
@@ -4952,12 +4949,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c07d45c7ed032ac46b6eaa8d67b06e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowSpeed: 7
-  waitToAttack: 0.55
   sentinel: {fileID: 1782577781}
   arrowPrefab: {fileID: 5298469509799718652, guid: e43ef23abbf35574b970af2f12e1c8a5, type: 3}
   nearbyUnits: []
-  aniAttack: {fileID: 0}
   sfxShootMagic: {fileID: 8300000, guid: 736550a7e854657469acf90aaa6351dc, type: 3}
 --- !u!4 &656308663
 Transform:
@@ -5120,12 +5114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c07d45c7ed032ac46b6eaa8d67b06e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowSpeed: 5
-  waitToAttack: 3
   sentinel: {fileID: 229995326}
   arrowPrefab: {fileID: 5298469509799718652, guid: e43ef23abbf35574b970af2f12e1c8a5, type: 3}
   nearbyUnits: []
-  aniAttack: {fileID: 229995328}
   sfxShootMagic: {fileID: 8300000, guid: 3671c6b444ac033418a80e05548202c6, type: 3}
 --- !u!1 &738889467
 GameObject:
@@ -5173,12 +5164,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c07d45c7ed032ac46b6eaa8d67b06e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowSpeed: 5
-  waitToAttack: 3
   sentinel: {fileID: 1187392292}
   arrowPrefab: {fileID: 5298469509799718652, guid: e43ef23abbf35574b970af2f12e1c8a5, type: 3}
   nearbyUnits: []
-  aniAttack: {fileID: 1187392294}
   sfxShootMagic: {fileID: 8300000, guid: 3671c6b444ac033418a80e05548202c6, type: 3}
 --- !u!135 &738889470
 SphereCollider:
@@ -8471,7 +8459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199a33080e7ae5749bcd5ec3b0680b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifes: 60
+  lifes: 70
   audiosource: {fileID: 1770296381}
   managerGame: {fileID: 1120462626}
 --- !u!135 &936649527
@@ -8499,12 +8487,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c07d45c7ed032ac46b6eaa8d67b06e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowSpeed: 7
-  waitToAttack: 0.55
   sentinel: {fileID: 532417429}
   arrowPrefab: {fileID: 5298469509799718652, guid: e43ef23abbf35574b970af2f12e1c8a5, type: 3}
   nearbyUnits: []
-  aniAttack: {fileID: 0}
   sfxShootMagic: {fileID: 8300000, guid: 9c931f675fa00f749a7f38f8ba8348a2, type: 3}
 --- !u!4 &936649529
 Transform:
@@ -8741,6 +8726,7 @@ GameObject:
   - component: {fileID: 1120462626}
   - component: {fileID: 1120462628}
   - component: {fileID: 1120462629}
+  - component: {fileID: 1120462630}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -8779,7 +8765,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1120462628
 MonoBehaviour:
@@ -8807,6 +8793,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 5
   attackDelay: 2
+--- !u!114 &1120462630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120462625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edf3561479a91bc4ca105081bc4a2812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sword: {fileID: 5298469509799718652, guid: ff326861c7bc12544a3a6cb4fcd47708, type: 3}
 --- !u!1 &1175592643
 GameObject:
   m_ObjectHideFlags: 0
@@ -9238,6 +9237,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 499829537bf2ffc43928cd28775ed4a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arrowSpeed: 7.5
+  waitToAttack: 0.65
   audioSClips: {fileID: 1231471375}
   sfxDamage:
   - {fileID: 8300000, guid: 0ae009db1483a1742872ad501988b9f3, type: 3}
@@ -9263,7 +9264,7 @@ Transform:
   - {fileID: 124835644}
   - {fileID: 1770296380}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1265662316
 GameObject:
@@ -9942,12 +9943,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c07d45c7ed032ac46b6eaa8d67b06e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowSpeed: 5
-  waitToAttack: 3
   sentinel: {fileID: 1332717791}
   arrowPrefab: {fileID: 5298469509799718652, guid: e43ef23abbf35574b970af2f12e1c8a5, type: 3}
   nearbyUnits: []
-  aniAttack: {fileID: 1332717793}
   sfxShootMagic: {fileID: 8300000, guid: 3671c6b444ac033418a80e05548202c6, type: 3}
 --- !u!135 &1381082518
 SphereCollider:
@@ -11996,12 +11994,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c07d45c7ed032ac46b6eaa8d67b06e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowSpeed: 5
-  waitToAttack: 3
   sentinel: {fileID: 1812615990}
   arrowPrefab: {fileID: 5298469509799718652, guid: e43ef23abbf35574b970af2f12e1c8a5, type: 3}
   nearbyUnits: []
-  aniAttack: {fileID: 1812615992}
   sfxShootMagic: {fileID: 8300000, guid: 3671c6b444ac033418a80e05548202c6, type: 3}
 --- !u!135 &1533159277
 SphereCollider:
@@ -12075,12 +12070,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c07d45c7ed032ac46b6eaa8d67b06e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowSpeed: 7
-  waitToAttack: 2
   sentinel: {fileID: 1443849213}
   arrowPrefab: {fileID: 5298469509799718652, guid: e43ef23abbf35574b970af2f12e1c8a5, type: 3}
   nearbyUnits: []
-  aniAttack: {fileID: 0}
   sfxShootMagic: {fileID: 8300000, guid: 3c35e492c34416e4b8fec3edf28b88b5, type: 3}
 --- !u!1001 &1579119718
 PrefabInstance:
@@ -13497,7 +13489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199a33080e7ae5749bcd5ec3b0680b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifes: 60
+  lifes: 50
   audiosource: {fileID: 1770296381}
   managerGame: {fileID: 1120462626}
 --- !u!1 &1708086472
@@ -13546,12 +13538,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c07d45c7ed032ac46b6eaa8d67b06e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowSpeed: 5
-  waitToAttack: 3
   sentinel: {fileID: 1721975266}
   arrowPrefab: {fileID: 5298469509799718652, guid: e43ef23abbf35574b970af2f12e1c8a5, type: 3}
   nearbyUnits: []
-  aniAttack: {fileID: 1721975268}
   sfxShootMagic: {fileID: 8300000, guid: 3671c6b444ac033418a80e05548202c6, type: 3}
 --- !u!135 &1708086475
 SphereCollider:
@@ -14285,51 +14274,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!1 &1852823710
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1852823712}
-  - component: {fileID: 1852823711}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1852823711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852823710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edf3561479a91bc4ca105081bc4a2812, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sword: {fileID: 5298469509799718652, guid: ff326861c7bc12544a3a6cb4fcd47708, type: 3}
---- !u!4 &1852823712
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852823710}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1948332645
 GameObject:
   m_ObjectHideFlags: 0

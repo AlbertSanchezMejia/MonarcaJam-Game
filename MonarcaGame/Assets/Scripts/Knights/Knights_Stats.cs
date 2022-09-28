@@ -6,7 +6,7 @@ public class Knights_Stats : MonoBehaviour
 {
     public static Knights_Stats singleton;
 
-    [Header ("Knight Stats")]
+    [Header ("Stats of the Knights")]
     public float movementSpeed;
     public float attackDelay;
 
@@ -17,10 +17,7 @@ public class Knights_Stats : MonoBehaviour
             singleton = this;
             DontDestroyOnLoad(this);
         }
-        else
-        {
-            Destroy(gameObject);
-        }
+        else { Destroy(gameObject); }
     }
 
     public Transform FindClosestTarget(Vector3 knightPosition)

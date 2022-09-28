@@ -9,6 +9,7 @@ public class Tower_Life : MonoBehaviour
     bool wasAlreadyCalled = false;
     [SerializeField] AudioSource audiosource;
     [SerializeField] GameManager managerGame;
+
     public void RestLife()
     {
         StartCoroutine(Co_RestLifes());
@@ -27,7 +28,7 @@ public class Tower_Life : MonoBehaviour
         {
             audiosource.Play();
             wasAlreadyCalled = true;
-            managerGame.TowersManager();
+            managerGame.CheckTowerNumber();
             Destroy(gameObject);
         }
     }

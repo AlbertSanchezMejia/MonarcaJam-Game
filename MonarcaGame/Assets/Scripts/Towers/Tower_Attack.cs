@@ -4,19 +4,15 @@ using UnityEngine;
 
 public class Tower_Attack : MonoBehaviour
 {
-    [SerializeField] float arrowSpeed;
-    [SerializeField] float waitToAttack;
     [SerializeField] Transform sentinel;
     [SerializeField] Rigidbody arrowPrefab;
     [SerializeField] List<GameObject> nearbyUnits;
     bool canAttack;
-    [SerializeField] Animator aniAttack;
-    Audio_Manager _audio;
+
     [SerializeField] AudioClip sfxShootMagic;
 
     void Start()
     {
-        _audio = FindObjectOfType<Audio_Manager>();
         TrueCanAttack();
         InvokeRepeating(nameof(CheckTargets), 0, 0.2f);
     }
@@ -48,22 +44,16 @@ public class Tower_Attack : MonoBehaviour
             sentinel.LookAt(nearbyUnits[0].transform);
             ShootArrow();
             canAttack = false;
-            Invoke(nameof(TrueCanAttack), waitToAttack);
+            Invoke(nameof(TrueCanAttack), Towers_Statics.statics.waitToAttack);
 
-            _audio.PlaySound(sfxShootMagic);
-
-            if (aniAttack != null)
-            {
-                aniAttack.Play("Attack");
-            }
-
+            Towers_Statics.statics.PlaySound(sfxShootMagic);
         }
     }
 
     void ShootArrow()
     {
         Rigidbody arrow = Instantiate(arrowPrefab, sentinel.position, sentinel.rotation);
-        arrow.velocity = sentinel.forward * arrowSpeed;
+        arrow.velocity = sentinel.forward * Towers_Statics.statics.arrowSpeed;
     }
 
     private void OnTriggerEnter(Collider other)

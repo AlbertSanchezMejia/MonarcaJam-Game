@@ -18,20 +18,20 @@ public class GameManager : MonoBehaviour
         towerCount = towers.Length;
     }
 
-    public void TowersManager()
+    public void CheckTowerNumber()
     {
         towerCount--;
         if(towerCount <= 0)
         {
             Destroy(witches);
             textWin.SetActive(true);
-            SetWinMusic();
+            PlayWinMusic();
             return;
         }
-        SetDangerMusic();
+        PlayTowerDestroyedMusic();
     }
 
-    void SetDangerMusic()
+    void PlayTowerDestroyedMusic()
     {
         if(musicGame2.isPlaying == false && towerCount <= 2)
         {
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void SetWinMusic()
+    void PlayWinMusic()
     {
         musicGame1.Stop();
         musicGame2.Stop();

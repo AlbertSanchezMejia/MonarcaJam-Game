@@ -5,11 +5,9 @@ using UnityEngine;
 public class Tower_Body : MonoBehaviour
 {
     Tower_Life tower_Life;
-    Audio_Manager _audio;
 
     void Start()
     {
-        _audio = FindObjectOfType<Audio_Manager>();
         tower_Life = transform.parent.gameObject.GetComponent<Tower_Life>();
     }
 
@@ -17,7 +15,7 @@ public class Tower_Body : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Sword"))
         {
-            _audio.SfxSwords();
+            Towers_Statics.statics.SfxSwords();
             Destroy(other.gameObject);
             tower_Life.RestLife();
         }
