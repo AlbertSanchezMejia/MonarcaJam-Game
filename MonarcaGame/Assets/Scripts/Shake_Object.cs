@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class Shake_Object : MonoBehaviour
 {
+    public static Shake_Object shake;
+
+    void Awake()
+    {
+        if (shake == null)
+        {
+            shake = this;
+            DontDestroyOnLoad(this);
+        }
+        else { Destroy(gameObject); }
+    }
+
     [SerializeField] float shakeTime = 1.0f;
     [SerializeField] float shakeDistance = 0.25f;
     [SerializeField] Transform objectToShake;

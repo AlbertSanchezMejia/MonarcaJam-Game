@@ -47,7 +47,7 @@ public class Knights_Attack : MonoBehaviour
 
     void Attack()
     {
-        Rigidbody sword = Instantiate(ShootB.swordPrefab, transform.position, transform.rotation);
+        Rigidbody sword = Instantiate(Sword_Bullet.swordPrefab, transform.position, transform.rotation);
         sword.velocity = transform.forward * 5;
 
         animator.Play("Attack");

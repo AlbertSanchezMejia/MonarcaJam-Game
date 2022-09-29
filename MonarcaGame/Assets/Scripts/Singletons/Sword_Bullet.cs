@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootB : MonoBehaviour
+public class Sword_Bullet : MonoBehaviour
 {
     public static Rigidbody swordPrefab;
     [SerializeField] Rigidbody sword;

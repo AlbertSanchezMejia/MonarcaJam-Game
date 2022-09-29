@@ -26,12 +26,18 @@ public class Tower_Life : MonoBehaviour
 
         if (lifes == 0 && wasAlreadyCalled == false)
         {
-            audiosource.Play();
-            wasAlreadyCalled = true;
-            managerGame.CheckTowerNumber();
-            Destroy(gameObject);
+            DestroyTower();
         }
     }
 
+    void DestroyTower()
+    {
+        audiosource.Play();
+        Shake_Object.shake.StartShake();
+
+        wasAlreadyCalled = true;
+        managerGame.CheckTowerNumber();
+        Destroy(gameObject);
+    }
 
 }
