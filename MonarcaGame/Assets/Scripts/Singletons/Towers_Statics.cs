@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Towers_Statics : MonoBehaviour
@@ -8,7 +9,6 @@ public class Towers_Statics : MonoBehaviour
         if (statics == null)
         {
             statics = this;
-            DontDestroyOnLoad(this);
         }
         else { Destroy(gameObject); }
     }

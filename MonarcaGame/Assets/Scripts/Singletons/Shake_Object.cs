@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Shake_Object : MonoBehaviour
@@ -11,7 +10,6 @@ public class Shake_Object : MonoBehaviour
         if (shake == null)
         {
             shake = this;
-            DontDestroyOnLoad(this);
         }
         else { Destroy(gameObject); }
     }

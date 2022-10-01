@@ -15,7 +15,6 @@ public class Knights_Stats : MonoBehaviour
         if(singleton == null)
         {
             singleton = this;
-            DontDestroyOnLoad(this);
         }
         else { Destroy(gameObject); }
     }

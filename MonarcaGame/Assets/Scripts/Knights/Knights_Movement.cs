@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class Knights_Movement : MonoBehaviour
 {
-    [SerializeField] Animator animator;
-
     [HideInInspector] public Transform target;
     bool canMove = true;
     Rigidbody rb;
@@ -34,7 +32,6 @@ public class Knights_Movement : MonoBehaviour
         {
             canMove = false;
             rb.isKinematic = true;
-            animator.Play("Idle");
         }
     }
 
